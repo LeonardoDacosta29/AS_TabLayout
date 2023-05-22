@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity
             tabLayout1.addTab(tabLayout1.newTab().setText("E-Commerce"));
             tabLayout1.addTab(tabLayout1.newTab().setText("Berita"));
             tabLayout1.addTab(tabLayout1.newTab().setText("Kampus"));
-            tabLayout1.setTabGravity((TabLayout.GRAVITY_CENTER));
+            tabLayout1.setTabGravity((TabLayout.GRAVITY_FILL));
 
             final ViewPager viewPager1 = (ViewPager) findViewById(R.id.viewPager1);
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
             viewPager1.setAdapter(_myFragmentPagerAdapter);
             viewPager1.setOffscreenPageLimit(3);
 
-            viewPager1.addOnAdapterChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout1)) ;
+            viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout1)) ;
 
             tabLayout1.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
             {
